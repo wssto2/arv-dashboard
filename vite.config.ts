@@ -10,13 +10,5 @@ export default defineConfig({
       name: "ArvDashboard",
       fileName: (format) => `app.${format}.js`,
     },
-    rollupOptions: {
-      external: ["vue"],
-      output: {
-        globals: {
-          vue: "Vue",
-        },
-      },
-    },
   },
 });

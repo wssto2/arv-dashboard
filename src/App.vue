@@ -6,9 +6,7 @@ const widgets = ref(window?.DASHBOARD_STATE?.widgets || [])
 </script>
 
 <template>
-  <div class="content">
-    <widget-canvas :widgets="widgets" />
-  </div>
+  <widget-canvas :widgets="widgets" />
 </template>
 
 <style>

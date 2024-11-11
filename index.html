@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Vue + TS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/core.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/components.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/colors.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="page-container">
+      <div class="page-content">
+        <div class="content-wrapper">
+          <div id="app"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.DASHBOARD_STATE = {
+        locale: 'mk',
+        api_base_url: 'http://127.0.0.1:6300/arv/hr/',
+        api_token: 'zlHm5BTF9chgrEYFczkCYq7WUognkYBE',
+        widgets: [
+          'sale_summary_by_dealer',
+          'confirmed_evaluations',
+          'active_vehicles',
+          'stock_age',
+          'summary_by_phase',
+          'preparation_phase_summary',
+          'planned_deliveries',
+        ]
+      }
+    </script>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

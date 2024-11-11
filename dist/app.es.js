@@ -11288,4 +11288,4 @@ const Zg = au({
   }
 }), Lr = Hr(Ug);
 Lr.use(Zg);
-Lr.mount("#app");
+Lr.mount("#widgetsRoot");

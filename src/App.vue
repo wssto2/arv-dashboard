@@ -11,8 +11,8 @@ const widgets = ref(window?.DASHBOARD_STATE?.widgets || [])
 
 <style>
 .panel-heading-meta {
-  padding-right: 10px;
+  padding-right: 15px;
   border-right: 1px solid #ddd;
-  margin-right: 10px;
+  margin-right: 15px;
 }
 </style>

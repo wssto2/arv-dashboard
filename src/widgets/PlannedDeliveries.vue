@@ -93,7 +93,7 @@ onMounted(() => {
 				</div>
 
 				<a href="#" @click.prevent="fetch">
-					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-refresh-ccw"><polyline points="1 4 1 10 7 10"/><polyline points="23 20 23 14 17 14"/><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"/></svg>
+					<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-refresh-ccw"><polyline points="1 4 1 10 7 10"/><polyline points="23 20 23 14 17 14"/><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"/></svg>
 				</a>
 			</div>
 		</div>
@@ -107,7 +107,7 @@ onMounted(() => {
 				<tbody>
 					<tr v-for="vehicle in data.vehicles" :key="`planned_delivery_vehicle_${vehicle.id}`">
 						<td>
-							<a :href="`/sto2.php?w=predaja_vozila&d=edit&ID=${vehicle.id}`" class="display-block mb-5">{{ vehicle.title }}</a>
+							<a :href="`/sto2.php?w=predaja_vozila&d=isporuka_vozila&ID=${vehicle.id}`" class="display-block mb-5">{{ vehicle.title }}</a>
 							<p class="text-size-small no-margin">{{ vehicle.sold_by ? vehicle.sold_by : vehicle.created_by }}</p>
 						</td>
 						<td class="text-right">{{ formatDateTime(vehicle.planned_delivery) }}</td>

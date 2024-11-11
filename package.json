@@ -1,7 +1,18 @@
 {
-    "name": "arv-dashboard",
-    "private": true,
-    "version": "1.0.0",
+    "name": "@wssto2/arv-dashboard",
+    "private": false,
+    "version": "1.1.0",
+    "repository": {
+    "type": "git",
+        "url": "git+https://github.com/wssto2/arv-dashboard.git"
+    },
+    "bugs": {
+        "url": "https://github.com/wssto2/arv-dashboard/issues"
+    },
+    "homepage": "https://github.com/wssto2/arv-dashboard",
+    "publishConfig": {
+        "access": "public"
+    },
     "type": "module",
     "scripts": {
         "dev": "vite",

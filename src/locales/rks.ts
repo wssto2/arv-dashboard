@@ -1,7 +1,21 @@
 export default {
+  empty_data_message: {
+    title: "Nuk ka të dhëna",
+    description: "Nuk ka të dhëna për të shfaqur",
+  },
   sale_summary_by_dealer: {
     title: "Rezultatet e shitjes",
     dealer: "Dileri",
+    current_month: "Muaji aktual",
+    current_year: "Viti aktual",
+    evaluations: "Vlerësimet",
+    confirmed_evaluations: "Vlerësimet e vërtetuara",
+    sold: "Të shitura",
+    delivered: "Të dorëzuara",
+  },
+  sale_summary_by_employee: {
+    title: "Rezultatet e shitjes",
+    employee: "Shitësi",
     current_month: "Muaji aktual",
     current_year: "Viti aktual",
     evaluations: "Vlerësimet",
@@ -43,5 +57,17 @@ export default {
     title: "Plani i dorëzimit",
     heading_soon_total: "Dorëzimi në 5 ditët e ardhshme",
     heading_total: "totali",
+  },
+  pending_evaluations: {
+    title: "Pending evaluations",
+    vehicle: "Vehicle",
+    last_comment: "Last comment",
+    created_at: "Created at",
+    no_comments: "No comments",
+  },
+  recent_evaluations: {
+    title: "Recent evaluations",
+    vehicle: "Vehicle",
+    created_at: "Created at",
   },
 };

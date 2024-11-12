@@ -1,7 +1,21 @@
 export default {
+  empty_data_message: {
+    title: "Ni podatkov",
+    description: "Ni podatkov za prikaz",
+  },
   sale_summary_by_dealer: {
     title: "Rezultati prodaje",
     dealer: "Koncesionar",
+    current_month: "Trenutni mesec",
+    current_year: "Trenutno leto",
+    evaluations: "Cenitve",
+    confirmed_evaluations: "Potrjene cenitve",
+    sold: "Prodana",
+    delivered: "Odpremljena",
+  },
+  sale_summary_by_employee: {
+    title: "Rezultati prodaje",
+    employee: "Prodajalec",
     current_month: "Trenutni mesec",
     current_year: "Trenutno leto",
     evaluations: "Cenitve",
@@ -43,5 +57,17 @@ export default {
     title: "Plan odprem",
     heading_soon_total: "Odpreme v prihodnjih 5 dnevih",
     heading_total: "skupno",
+  },
+  pending_evaluations: {
+    title: "Nepopolne cenitve",
+    vehicle: "Vozilo",
+    last_comment: "Zadnji komentar",
+    created_at: "Vneseno",
+    no_comments: "Brez komentarjev",
+  },
+  recent_evaluations: {
+    title: "Nove cenitve",
+    vehicle: "Vozilo",
+    created_at: "Vneseno",
   },
 };

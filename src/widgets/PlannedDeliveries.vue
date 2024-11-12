@@ -5,6 +5,7 @@ import Loader from '../components/Loader.vue';
 import { useI18n } from 'vue-i18n';
 import type { MessageSchema } from '../locales/schema';
 const { t } = useI18n<{ message: MessageSchema }>();
+import EmptyDataMessage from '../components/EmptyDataMessage.vue';
 
 type Vehicle = {
 	id: number;
@@ -103,7 +104,8 @@ onMounted(() => {
 			</div>
 		</div>
 		<div v-else class="panel-body no-padding">
-			<table class="table">
+			<empty-data-message v-if="!data.vehicles.length" />
+			<table v-else class="table">
 				<tbody>
 					<tr v-for="vehicle in data.vehicles" :key="`planned_delivery_vehicle_${vehicle.id}`">
 						<td>

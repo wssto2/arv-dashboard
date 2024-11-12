@@ -1,7 +1,21 @@
 export default {
+  empty_data_message: {
+    title: "No data",
+    description: "No data to display",
+  },
   sale_summary_by_dealer: {
     title: "Sales results",
     dealer: "Dealership",
+    current_month: "Current month",
+    current_year: "Current year",
+    evaluations: "Evaluation",
+    confirmed_evaluations: "Confirmed evaluation",
+    sold: "Sold",
+    delivered: "Delivered",
+  },
+  sale_summary_by_employee: {
+    title: "Sales results",
+    employee: "Seller",
     current_month: "Current month",
     current_year: "Current year",
     evaluations: "Evaluation",
@@ -25,7 +39,7 @@ export default {
     title: "Number of vehicles per phase",
     heading_total: "Total number of vehicles",
     phase: "Phase",
-    total: "Number of vehicles	",
+    total: "Number of vehicles",
     average: "Average days",
     confirmed_evaluations: "Confirmed evaluation",
     evaluations: "Vehicles in evaluation",
@@ -42,6 +56,18 @@ export default {
   planned_deliveries: {
     title: "Delivery plan",
     heading_soon_total: "Delivery in the next 5 days",
-    heading_total: "total",
+    heading_total: "Total",
+  },
+  pending_evaluations: {
+    title: "Pending evaluations",
+    vehicle: "Vehicle",
+    last_comment: "Last comment",
+    created_at: "Created at",
+    no_comments: "No comments",
+  },
+  recent_evaluations: {
+    title: "Recent evaluations",
+    vehicle: "Vehicle",
+    created_at: "Created at",
   },
 };

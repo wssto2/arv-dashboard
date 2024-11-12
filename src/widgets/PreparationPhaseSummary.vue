@@ -99,7 +99,7 @@ onMounted(() => {
 			</div>
 		</div>
 		<div v-else class="panel-body no-padding">
-			<empty-data-message v-if="!data.vehicles.length" />
+			<empty-data-message v-if="!data.vehicles || !data.vehicles.length" />
 			<table v-else class="table">
 				<thead>
 					<tr>

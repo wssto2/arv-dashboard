@@ -81,36 +81,36 @@ onMounted(() => {
 			</div>
 		</div>
 		<div v-else class="panel-body no-padding" style="height: 300px; overflow-y: auto;">
-			<table class="table text-nowrap table-fixed-header">
+			<table class="table table-striped text-nowrap table-fixed-header">
 				<thead style="position: sticky; top: 0; z-index: 1; background-color: #fff; box-shadow: 0 -4px 8px 0px #000;">
 					<tr>
-						<th></th>
-						<th colspan="4" class="bg-slate-700">{{ t('sale_summary_by_dealer.current_month') }}</th>
-						<th colspan="4" class="bg-info-700">{{ t('sale_summary_by_dealer.current_year') }}</th>
+						<th style="border-right: 1px solid #ddd;"></th>
+						<th colspan="4" class="text-center" style="border-right: 1px solid #ddd;">{{ t('sale_summary_by_dealer.current_month') }}</th>
+						<th colspan="4" class="text-center">{{ t('sale_summary_by_dealer.current_year') }}</th>
 					</tr>
 					<tr>
-						<th>{{ t('sale_summary_by_dealer.dealer') }}<div class="fht-cell" style="width: 199px;"></div></th>
-						<th width="150" class="text-center bg-slate">{{ t('sale_summary_by_dealer.evaluations') }}<div class="fht-cell" style="width: 110px;"></div></th>
-						<th width="150" class="text-center bg-slate">{{ t('sale_summary_by_dealer.confirmed_evaluations') }}<div class="fht-cell" style="width: 114px;"></div></th>
-						<th width="150" class="text-center bg-slate">{{ t('sale_summary_by_dealer.sold') }}<div class="fht-cell" style="width: 110px;"></div></th>
-						<th width="150" class="text-center bg-slate">{{ t('sale_summary_by_dealer.delivered') }}<div class="fht-cell" style="width: 110px;"></div></th>
-						<th width="150" class="text-center bg-info">{{ t('sale_summary_by_dealer.evaluations') }}<div class="fht-cell" style="width: 110px;"></div></th>
-						<th width="150" class="text-center bg-info">{{ t('sale_summary_by_dealer.confirmed_evaluations') }}<div class="fht-cell" style="width: 114px;"></div></th>
-						<th width="150" class="text-center bg-info">{{ t('sale_summary_by_dealer.sold') }}<div class="fht-cell" style="width: 110px;"></div></th>
-						<th width="150" class="text-center bg-info">{{ t('sale_summary_by_dealer.delivered') }}<div class="fht-cell" style="width: 110px;"></div></th>
+						<th style="border-right: 1px solid #ddd;">{{ t('sale_summary_by_dealer.dealer') }}<div class="fht-cell" style="width: 199px;"></div></th>
+						<th width="150" class="text-center">{{ t('sale_summary_by_dealer.evaluations') }}<div class="fht-cell" style="width: 110px;"></div></th>
+						<th width="150" class="text-center">{{ t('sale_summary_by_dealer.confirmed_evaluations') }}<div class="fht-cell" style="width: 114px;"></div></th>
+						<th width="150" class="text-center">{{ t('sale_summary_by_dealer.sold') }}<div class="fht-cell" style="width: 110px;"></div></th>
+						<th width="150" class="text-center" style="border-right: 1px solid #ddd;">{{ t('sale_summary_by_dealer.delivered') }}<div class="fht-cell" style="width: 110px;"></div></th>
+						<th width="150" class="text-center">{{ t('sale_summary_by_dealer.evaluations') }}<div class="fht-cell" style="width: 110px;"></div></th>
+						<th width="150" class="text-center">{{ t('sale_summary_by_dealer.confirmed_evaluations') }}<div class="fht-cell" style="width: 114px;"></div></th>
+						<th width="150" class="text-center">{{ t('sale_summary_by_dealer.sold') }}<div class="fht-cell" style="width: 110px;"></div></th>
+						<th width="150" class="text-center">{{ t('sale_summary_by_dealer.delivered') }}<div class="fht-cell" style="width: 110px;"></div></th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr v-for="row in data" :key="row.dealer">
-						<td>{{ row.dealer }}</td>
-						<td class="text-semibold text-center bg-slate-300">{{ row.evaluations_current_month_total }}</td>
-						<td class="text-semibold text-center bg-slate-300">{{ row.evaluations_confirmed_current_month_total }}</td>
-						<td class="text-semibold text-center bg-slate-300">{{ row.sold_current_month_total }}</td>
-						<td class="text-semibold text-center bg-slate-300">{{ row.delivered_current_month_total }}</td>
-						<td class="text-semibold text-center bg-info-300">{{ row.evaluations_current_year_total }}</td>
-						<td class="text-semibold text-center bg-info-300">{{ row.evaluations_confirmed_current_year_total }}</td>
-						<td class="text-semibold text-center bg-info-300">{{ row.sold_current_year_total }}</td>
-						<td class="text-semibold text-center bg-info-300">{{ row.delivered_current_year_total }}</td>
+						<td style="border-right: 1px solid #ddd;">{{ row.dealer }}</td>
+						<td class="text-semibold text-center">{{ row.evaluations_current_month_total }}</td>
+						<td class="text-semibold text-center">{{ row.evaluations_confirmed_current_month_total }}</td>
+						<td class="text-semibold text-center">{{ row.sold_current_month_total }}</td>
+						<td class="text-semibold text-center" style="border-right: 1px solid #ddd;">{{ row.delivered_current_month_total }}</td>
+						<td class="text-semibold text-center">{{ row.evaluations_current_year_total }}</td>
+						<td class="text-semibold text-center">{{ row.evaluations_confirmed_current_year_total }}</td>
+						<td class="text-semibold text-center">{{ row.sold_current_year_total }}</td>
+						<td class="text-semibold text-center">{{ row.delivered_current_year_total }}</td>
 					</tr>
 				</tbody>
 			</table>

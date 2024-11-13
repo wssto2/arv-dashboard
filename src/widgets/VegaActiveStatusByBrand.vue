@@ -82,11 +82,11 @@ const round = (value: number) => {
 
 const cellStyle = (value: number) => {
 	if (value < LIMIT_LOW) {
-		return 'text-danger-800';
+		return 'text-danger';
 	} else if (value > LIMIT_HIGHT) {
-		return 'text-success-800';
+		return 'text-success';
 	} else {
-		return 'text-orange-800';
+		return 'text-orange';
 	}
 }
 
@@ -116,39 +116,39 @@ onMounted(() => {
 			</div>
 		</div>
 		<div v-else class="panel-body no-padding" :style="`max-height: ${isExpanded ? 'auto' : '300px'}; overflow-y: auto;`">
-			<table ref="table" class="table text-nowrap table-fixed-header">
+			<table ref="table" class="table table-striped text-nowrap table-fixed-header">
 				<thead style="position: sticky; top: 0; z-index: 1; background-color: #fff; box-shadow: 0 -4px 8px 0px #000;">
 					<tr>
-						<th></th>
-						<th colspan="3" class="text-center bg-orange-700">{{ t('vega_active_status_by_brand.renault') }}</th>
-						<th colspan="3" class="text-center bg-green-700">{{ t('vega_active_status_by_brand.dacia') }}</th>
-						<th colspan="3" class="text-center bg-danger-700">{{ t('vega_active_status_by_brand.nissan') }}</th>
+						<th style="border-right: 1px solid #ddd;"></th>
+						<th colspan="3" class="text-center" style="border-right: 1px solid #ddd;">{{ t('vega_active_status_by_brand.renault') }}</th>
+						<th colspan="3" class="text-center" style="border-right: 1px solid #ddd;">{{ t('vega_active_status_by_brand.dacia') }}</th>
+						<th colspan="3" class="text-center">{{ t('vega_active_status_by_brand.nissan') }}</th>
 					</tr>
 					<tr>
-						<th>{{ t('sale_summary_by_dealer.dealer') }}<div class="fht-cell" style="width: 199px;"></div></th>
-						<th width="150" class="text-center bg-orange">{{ t('vega_active_status_by_brand.total') }}<div class="fht-cell" style="width: 100px;"></div></th>
-						<th width="150" class="text-center bg-orange">{{ t('vega_active_status_by_brand.active') }}<div class="fht-cell" style="width: 100px;"></div></th>
-						<th width="150" class="text-center bg-orange">%<div class="fht-cell" style="width: 100px;"></div></th>
-						<th width="150" class="text-center bg-green">{{ t('vega_active_status_by_brand.total') }}<div class="fht-cell" style="width: 100px;"></div></th>
-						<th width="150" class="text-center bg-green">{{ t('vega_active_status_by_brand.active') }}<div class="fht-cell" style="width: 100px;"></div></th>
-						<th width="150" class="text-center bg-green">%<div class="fht-cell" style="width: 100px;"></div></th>
-						<th width="150" class="text-center bg-danger">{{ t('vega_active_status_by_brand.total') }}<div class="fht-cell" style="width: 100px;"></div></th>
-						<th width="150" class="text-center bg-danger">{{ t('vega_active_status_by_brand.active') }}<div class="fht-cell" style="width: 100px;"></div></th>
-						<th width="150" class="text-center bg-danger">%<div class="fht-cell" style="width: 100px;"></div></th>
+						<th style="border-right: 1px solid #ddd;">{{ t('sale_summary_by_dealer.dealer') }}<div class="fht-cell" style="width: 199px;"></div></th>
+						<th width="150" class="text-center">{{ t('vega_active_status_by_brand.total') }}<div class="fht-cell" style="width: 100px;"></div></th>
+						<th width="150" class="text-center">{{ t('vega_active_status_by_brand.active') }}<div class="fht-cell" style="width: 100px;"></div></th>
+						<th width="150" class="text-center" style="border-right: 1px solid #ddd;">%<div class="fht-cell" style="width: 100px;"></div></th>
+						<th width="150" class="text-center">{{ t('vega_active_status_by_brand.total') }}<div class="fht-cell" style="width: 100px;"></div></th>
+						<th width="150" class="text-center">{{ t('vega_active_status_by_brand.active') }}<div class="fht-cell" style="width: 100px;"></div></th>
+						<th width="150" class="text-center" style="border-right: 1px solid #ddd;">%<div class="fht-cell" style="width: 100px;"></div></th>
+						<th width="150" class="text-center">{{ t('vega_active_status_by_brand.total') }}<div class="fht-cell" style="width: 100px;"></div></th>
+						<th width="150" class="text-center">{{ t('vega_active_status_by_brand.active') }}<div class="fht-cell" style="width: 100px;"></div></th>
+						<th width="150" class="text-center">%<div class="fht-cell" style="width: 100px;"></div></th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr v-for="row in data" :key="row.dealer_name">
-						<td>{{ row.dealer_name }}</td>
-						<td class="text-semibold text-center alpha-orange">{{ row.renault_total }}</td>
-						<td class="text-semibold text-center alpha-orange">{{ row.renault_active }}</td>
-						<td :class="['text-semibold text-center alpha-orange', cellStyle(row.renault_percentage)]">{{ round(row.renault_percentage) }}%</td>
-						<td class="text-semibold text-center alpha-green">{{ row.dacia_total }}</td>
-						<td class="text-semibold text-center alpha-green">{{ row.dacia_active }}</td>
-						<td :class="['text-semibold text-center alpha-green', cellStyle(row.dacia_percentage)]">{{ round(row.dacia_percentage) }}%</td>
-						<td class="text-semibold text-center alpha-danger">{{ row.nissan_total }}</td>
-						<td class="text-semibold text-center alpha-danger">{{ row.nissan_active }}</td>
-						<td :class="['text-semibold text-center alpha-danger', cellStyle(row.nissan_percentage)]">{{ round(row.nissan_percentage) }}%</td>
+						<td style="border-right: 1px solid #ddd;">{{ row.dealer_name }}</td>
+						<td class="text-semibold text-center">{{ row.renault_total }}</td>
+						<td class="text-semibold text-center">{{ row.renault_active }}</td>
+						<td :class="['text-semibold text-center', cellStyle(row.renault_percentage)]" style="border-right: 1px solid #ddd;">{{ round(row.renault_percentage) }}%</td>
+						<td class="text-semibold text-center">{{ row.dacia_total }}</td>
+						<td class="text-semibold text-center">{{ row.dacia_active }}</td>
+						<td :class="['text-semibold text-center', cellStyle(row.dacia_percentage)]" style="border-right: 1px solid #ddd;">{{ round(row.dacia_percentage) }}%</td>
+						<td class="text-semibold text-center">{{ row.nissan_total }}</td>
+						<td class="text-semibold text-center">{{ row.nissan_active }}</td>
+						<td :class="['text-semibold text-center', cellStyle(row.nissan_percentage)]">{{ round(row.nissan_percentage) }}%</td>
 					</tr>
 				</tbody>
 			</table>

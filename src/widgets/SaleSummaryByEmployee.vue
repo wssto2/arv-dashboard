@@ -97,36 +97,36 @@ onMounted(() => {
 			</div>
 		</div>
 		<div v-else class="panel-body no-padding" :style="`max-height: ${isExpanded ? 'auto' : '300px'}; overflow-y: auto;`">
-			<table ref="table" class="table text-nowrap table-fixed-header">
+			<table ref="table" class="table table-striped text-nowrap table-fixed-header">
 				<thead style="position: sticky; top: 0; z-index: 1; background-color: #fff; box-shadow: 0 -4px 8px 0px #000;">
 					<tr>
-						<th></th>
-						<th colspan="4" class="bg-slate-700">{{ t('sale_summary_by_employee.current_month') }}</th>
-						<th colspan="4" class="bg-info-700">{{ t('sale_summary_by_employee.current_year') }}</th>
+						<th style="border-right: 1px solid #ddd;"></th>
+						<th colspan="4" class="text-center" style="border-right: 1px solid #ddd;">{{ t('sale_summary_by_employee.current_month') }}</th>
+						<th colspan="4" class="text-center">{{ t('sale_summary_by_employee.current_year') }}</th>
 					</tr>
 					<tr>
-						<th>{{ t('sale_summary_by_employee.employee') }}<div class="fht-cell" style="width: 199px;"></div></th>
-						<th width="150" class="text-center bg-slate">{{ t('sale_summary_by_employee.evaluations') }}<div class="fht-cell" style="width: 110px;"></div></th>
-						<th width="150" class="text-center bg-slate">{{ t('sale_summary_by_employee.confirmed_evaluations') }}<div class="fht-cell" style="width: 114px;"></div></th>
-						<th width="150" class="text-center bg-slate">{{ t('sale_summary_by_employee.sold') }}<div class="fht-cell" style="width: 110px;"></div></th>
-						<th width="150" class="text-center bg-slate">{{ t('sale_summary_by_employee.delivered') }}<div class="fht-cell" style="width: 110px;"></div></th>
-						<th width="150" class="text-center bg-info">{{ t('sale_summary_by_employee.evaluations') }}<div class="fht-cell" style="width: 110px;"></div></th>
-						<th width="150" class="text-center bg-info">{{ t('sale_summary_by_employee.confirmed_evaluations') }}<div class="fht-cell" style="width: 114px;"></div></th>
-						<th width="150" class="text-center bg-info">{{ t('sale_summary_by_employee.sold') }}<div class="fht-cell" style="width: 110px;"></div></th>
-						<th width="150" class="text-center bg-info">{{ t('sale_summary_by_employee.delivered') }}<div class="fht-cell" style="width: 110px;"></div></th>
+						<th style="border-right: 1px solid #ddd;">{{ t('sale_summary_by_employee.employee') }}<div class="fht-cell" style="width: 199px;"></div></th>
+						<th width="150" class="text-center">{{ t('sale_summary_by_employee.evaluations') }}<div class="fht-cell" style="width: 110px;"></div></th>
+						<th width="150" class="text-center">{{ t('sale_summary_by_employee.confirmed_evaluations') }}<div class="fht-cell" style="width: 114px;"></div></th>
+						<th width="150" class="text-center">{{ t('sale_summary_by_employee.sold') }}<div class="fht-cell" style="width: 110px;"></div></th>
+						<th width="150" class="text-center" style="border-right: 1px solid #ddd;">{{ t('sale_summary_by_employee.delivered') }}<div class="fht-cell" style="width: 110px;"></div></th>
+						<th width="150" class="text-center">{{ t('sale_summary_by_employee.evaluations') }}<div class="fht-cell" style="width: 110px;"></div></th>
+						<th width="150" class="text-center">{{ t('sale_summary_by_employee.confirmed_evaluations') }}<div class="fht-cell" style="width: 114px;"></div></th>
+						<th width="150" class="text-center">{{ t('sale_summary_by_employee.sold') }}<div class="fht-cell" style="width: 110px;"></div></th>
+						<th width="150" class="text-center">{{ t('sale_summary_by_employee.delivered') }}<div class="fht-cell" style="width: 110px;"></div></th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr v-for="row in data" :key="row.employee">
-						<td>{{ row.employee }}</td>
-						<td class="text-semibold text-center bg-slate-300">{{ row.evaluations_current_month_total }}</td>
-						<td class="text-semibold text-center bg-slate-300">{{ row.evaluations_confirmed_current_month_total }}</td>
-						<td class="text-semibold text-center bg-slate-300">{{ row.sold_current_month_total }}</td>
-						<td class="text-semibold text-center bg-slate-300">{{ row.delivered_current_month_total }}</td>
-						<td class="text-semibold text-center bg-info-300">{{ row.evaluations_current_year_total }}</td>
-						<td class="text-semibold text-center bg-info-300">{{ row.evaluations_confirmed_current_year_total }}</td>
-						<td class="text-semibold text-center bg-info-300">{{ row.sold_current_year_total }}</td>
-						<td class="text-semibold text-center bg-info-300">{{ row.delivered_current_year_total }}</td>
+						<td style="border-right: 1px solid #ddd;">{{ row.employee }}</td>
+						<td class="text-semibold text-center">{{ row.evaluations_current_month_total }}</td>
+						<td class="text-semibold text-center">{{ row.evaluations_confirmed_current_month_total }}</td>
+						<td class="text-semibold text-center">{{ row.sold_current_month_total }}</td>
+						<td class="text-semibold text-center" style="border-right: 1px solid #ddd;">{{ row.delivered_current_month_total }}</td>
+						<td class="text-semibold text-center">{{ row.evaluations_current_year_total }}</td>
+						<td class="text-semibold text-center">{{ row.evaluations_confirmed_current_year_total }}</td>
+						<td class="text-semibold text-center">{{ row.sold_current_year_total }}</td>
+						<td class="text-semibold text-center">{{ row.delivered_current_year_total }}</td>
 					</tr>
 				</tbody>
 			</table>

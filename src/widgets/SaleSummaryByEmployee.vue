@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, computed } from 'vue';
 import { joinPath } from '../helpers';
 import Loader from '../components/Loader.vue';
 import { useI18n } from 'vue-i18n';
@@ -64,6 +64,13 @@ const toggle = () => {
 	isExpanded.value = !isExpanded.value;
 }
 
+const table = ref<HTMLTableElement | null>(null);
+
+// Button is visible only if table height is greater than 300px
+const isExpandButtonVisible = computed(() => {
+	return (table.value?.offsetHeight || 0) > 300;
+});
+
 onMounted(() => {
 	fetch();
 });
@@ -76,7 +83,7 @@ onMounted(() => {
 				<h6 class="panel-title" style="flex: 1;">
 					<span class="text-default">{{ t('sale_summary_by_employee.title') }}</span>
 				</h6>
-				<a href="#" @click.prevent="toggle" class="mr-20">
+				<a v-show="isExpandButtonVisible" href="#" @click.prevent="toggle" class="mr-20">
 					<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-maximize-2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
 				</a>
 				<a href="#" @click.prevent="fetch">
@@ -89,8 +96,8 @@ onMounted(() => {
 				<loader :width="30" />
 			</div>
 		</div>
-		<div v-else class="panel-body no-padding" :style="`height: ${isExpanded ? 'auto' : '300px'}; overflow-y: auto;`">
-			<table class="table text-nowrap table-fixed-header">
+		<div v-else class="panel-body no-padding" :style="`max-height: ${isExpanded ? 'auto' : '300px'}; overflow-y: auto;`">
+			<table ref="table" class="table text-nowrap table-fixed-header">
 				<thead style="position: sticky; top: 0; z-index: 1; background-color: #fff; box-shadow: 0 -4px 8px 0px #000;">
 					<tr>
 						<th></th>

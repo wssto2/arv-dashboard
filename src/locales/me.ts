@@ -58,4 +58,12 @@ export default {
     heading_soon_total: "Isporuka u idućih 5 dana",
     heading_total: "ukupno",
   },
+  vega_active_status_by_brand: {
+    title: "Aktivna nova vozila",
+    total: "Ukupno",
+    active: "Aktivno",
+    renault: "Renault",
+    dacia: "Dacia",
+    nissan: "Nissan",
+  },
 };

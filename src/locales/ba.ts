@@ -70,4 +70,12 @@ export default {
     vehicle: "Vozilo",
     created_at: "Uneseno",
   },
+  vega_active_status_by_brand: {
+    title: "Aktivna nova vozila",
+    total: "Ukupno",
+    active: "Aktivno",
+    renault: "Renault",
+    dacia: "Dacia",
+    nissan: "Nissan",
+  },
 };

@@ -11,6 +11,7 @@ type PendingEvaluations = {
 	id: number;
 	title: string;
 	created_at: string;
+	author: string;
 	last_comment: string | null;
 	last_comment_author: string | null;
 	last_comment_date: string | null;
@@ -114,7 +115,10 @@ onMounted(() => {
 							</div>
 							<span v-else class="text-muted">{{ t('pending_evaluations.no_comments') }}</span>
 						</td>
-						<td class="text-right">{{ formatDateTime(evaluation.created_at) }}</td>
+						<td class="text-right">
+							<span class="text-semibold display-block">{{ formatDateTime(evaluation.created_at) }}</span>
+							<small>{{ evaluation.author }}</small>
+						</td>
 					</tr>
 				</tbody>
 			</table>

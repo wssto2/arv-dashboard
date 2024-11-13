@@ -8,6 +8,7 @@ import PreparationPhaseSummary from "./widgets/PreparationPhaseSummary.vue";
 import PlannedDeliveries from "./widgets/PlannedDeliveries.vue";
 import PendingEvaluations from "./widgets/PendingEvaluations.vue";
 import RecentEvaluations from "./widgets/RecentEvaluations.vue";
+import VegaActiveStatusByBrand from "./widgets/VegaActiveStatusByBrand.vue";
 
 type WidgetDefinition = {
   columns: number;
@@ -54,5 +55,9 @@ export default {
   recent_evaluations: {
     columns: 6,
     component: RecentEvaluations,
+  },
+  vega_active_status_by_brand: {
+    columns: 12,
+    component: VegaActiveStatusByBrand,
   },
 } as Record<string, WidgetDefinition>;

@@ -70,4 +70,12 @@ export default {
     vehicle: "Vehicle",
     created_at: "Created at",
   },
+  vega_active_status_by_brand: {
+    title: "Active new vehicles",
+    total: "Total",
+    active: "Active",
+    renault: "Renault",
+    dacia: "Dacia",
+    nissan: "Nissan",
+  },
 };

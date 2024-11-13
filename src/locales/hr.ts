@@ -58,6 +58,18 @@ export default {
     heading_soon_total: "Isporuka u idućih 5 dana",
     heading_total: "ukupno",
   },
+  pending_evaluations: {
+    title: "Nedovršene procjene",
+    vehicle: "Vozilo",
+    last_comment: "Zadnji komentar",
+    created_at: "Uneseno",
+    no_comments: "Nema komentara",
+  },
+  recent_evaluations: {
+    title: "Nedavne procjene",
+    vehicle: "Vozilo",
+    created_at: "Uneseno",
+  },
   vega_active_status_by_brand: {
     title: "Aktivna nova vozila",
     total: "Ukupno",

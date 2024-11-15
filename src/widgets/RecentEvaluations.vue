@@ -88,10 +88,10 @@ onMounted(() => {
 				<loader :width="30" />
 			</div>
 		</div>
-		<div v-else class="panel-body no-padding">
+		<div v-else class="panel-body no-padding" style="max-height: 300px; overflow-y: auto;">
 			<empty-data-message v-if="!data.length" />
-			<table v-else class="table">
-				<thead>
+			<table v-else class="table table-condensed">
+				<thead style="position: sticky; top: 0; z-index: 1; background-color: #fff; box-shadow: 0 -4px 8px 0px #000;">
 					<tr>
 						<th>{{ t('recent_evaluations.vehicle') }}</th>
 						<th width="180" class="text-right">{{ t('recent_evaluations.created_at') }}</th>

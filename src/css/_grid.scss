@@ -1,0 +1,63 @@
+@use 'variables';
+
+@mixin grid() {
+    display: grid;
+}
+
+@mixin grid-cols($cols: 1) {
+    grid-template-columns: repeat($cols, minmax(0, 1fr));
+}
+
+@mixin grid-rows($rows: 1) {
+    grid-template-rows: repeat($rows, minmax(0, 1fr));
+}
+
+@mixin grid-col-span($span: 1) {
+    grid-column: span $span / span $span;
+}
+
+@mixin grid-row-span($span: 1) {
+    grid-row: span $span / span $span;
+}
+
+.grid {
+    @include grid();
+}
+
+@each $i in 1 2 3 4 5 6 7 8 9 10 11 12 {
+    .grid-cols-#{$i} {
+        @include grid-cols($i);
+    }
+
+    .grid-rows-#{$i} {
+        @include grid-rows($i);
+    }
+
+    .grid-col-span-#{$i} {
+        @include grid-col-span($i);
+    }
+
+    .grid-row-span-#{$i} {
+        @include grid-row-span($i);
+    }
+
+    @each $breakpoint, $value in variables.$breakpoints {
+        @media (max-width: $value) {
+            .#{$breakpoint}\:grid-cols-#{$i} {
+                @include grid-cols($i);
+            }
+
+            .#{$breakpoint}\:grid-rows-#{$i} {
+                @include grid-rows($i);
+            }
+
+            .#{$breakpoint}\:grid-col-span-#{$i} {
+                @include grid-col-span($i);
+            }
+
+            .#{$breakpoint}\:grid-row-span-#{$i} {
+                @include grid-row-span($i);
+            }
+        }
+    }
+}

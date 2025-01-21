@@ -1,0 +1,466 @@
+@use 'sass:map';
+@use 'variables';
+
+@mixin flex() {
+    display: flex;
+}
+
+@mixin flex-row() {
+    flex-direction: row;
+}
+
+@mixin flex-col() {
+    flex-direction: column;
+}
+
+@mixin flex-wrap() {
+    flex-wrap: wrap;
+}
+
+@mixin flex-nowrap() {
+    flex-wrap: nowrap;
+}
+
+@mixin flex-1() {
+    flex: 1 1 0%;
+}
+
+@mixin flex-auto() {
+    flex: 1 1 auto;
+}
+
+@mixin flex-none() {
+    flex: none;
+}
+
+@mixin grow() {
+    flex-grow: 1;
+}
+
+@mixin shrink() {
+    flex-shrink: 1;
+}
+
+@mixin gap-0() {
+    gap: 0;
+}
+
+@mixin gap-1() {
+    gap: map.get($map: variables.$spacing, $key: 1);
+}
+
+@mixin gap-2() {
+    gap: map.get($map: variables.$spacing, $key: 2);
+}
+
+@mixin gap-3() {
+    gap: map.get($map: variables.$spacing, $key: 3);
+}
+
+@mixin gap-4() {
+    gap: map.get($map: variables.$spacing, $key: 4);
+}
+
+@mixin gap-5() {
+    gap: map.get($map: variables.$spacing, $key: 5);
+}
+
+@mixin justify-normal() {
+    justify-content: normal;
+}
+
+@mixin justify-start() {
+    justify-content: flex-start;
+}
+
+@mixin justify-end() {
+    justify-content: flex-end;
+}
+
+@mixin justify-center() {
+    justify-content: center;
+}
+
+@mixin justify-between() {
+    justify-content: space-between;
+}
+
+@mixin justify-around() {
+    justify-content: space-around;
+}
+
+@mixin justify-evenly() {
+    justify-content: space-evenly;
+}
+
+@mixin justify-stretch() {
+    justify-content: stretch;
+}
+
+@mixin items-start() {
+    align-items: flex-start;
+}
+
+@mixin items-end() {
+    align-items: flex-end;
+}
+
+@mixin items-center() {
+    align-items: center;
+}
+
+@mixin items-baseline() {
+    align-items: baseline;
+}
+
+@mixin items-stretch() {
+    align-items: stretch;
+}
+
+.flex {
+    @include flex();
+}
+
+.flex-row {
+    @include flex-row();
+}
+
+.flex-col {
+    @include flex-col();
+}
+
+.flex-wrap {
+    @include flex-wrap();
+}
+
+.flex-nowrap {
+    @include flex-nowrap();
+}
+
+.flex-1 {
+    @include flex-1();
+}
+
+.flex-auto {
+    @include flex-auto();
+}
+
+.flex-none {
+    @include flex-none();
+}
+
+.grow {
+    @include grow();
+}
+
+.shrink {
+    @include shrink();
+}
+
+.gap-0 {
+    @include gap-0();
+}
+
+.gap-1 {
+    @include gap-1();
+}
+
+.gap-2 {
+    @include gap-2();
+}
+
+.gap-3 {
+    @include gap-3();
+}
+
+.gap-4 {
+    @include gap-4();
+}
+
+.gap-5 {
+    @include gap-5();
+}
+
+.justify-normal {
+    @include justify-normal();
+}
+
+.justify-start {
+    @include justify-start();
+}
+
+.justify-end {
+    @include justify-end();
+}
+
+.justify-center {
+    @include justify-center();
+}
+
+.justify-between {
+    @include justify-between();
+}
+
+.justify-around {
+    @include justify-around();
+}
+
+.justify-evenly {
+    @include justify-evenly();
+}
+
+.justify-stretch {
+    @include justify-stretch();
+}
+
+.items-start {
+    @include items-start();
+}
+
+.items-end {
+    @include items-end();
+}
+
+.items-center {
+    @include items-center();
+}
+
+.items-baseline {
+    @include items-baseline();
+}
+
+.items-stretch {
+    @include items-stretch();
+}
+
+@each $breakpoint, $value in variables.$breakpoints {
+    @media (max-width: $value) {
+        .#{$breakpoint}\:flex {
+            @include flex();
+        }
+    }
+}
+
+@each $breakpoint, $value in variables.$breakpoints {
+    @media (max-width: $value) {
+        .#{$breakpoint}\:flex-row {
+            @include flex-row();
+        }
+    }
+}
+
+@each $breakpoint, $value in variables.$breakpoints {
+    @media (max-width: $value) {
+        .#{$breakpoint}\:flex-col {
+            @include flex-col();
+        }
+    }
+}
+
+@each $breakpoint, $value in variables.$breakpoints {
+    @media (max-width: $value) {
+        .#{$breakpoint}\:flex-wrap {
+            @include flex-wrap();
+        }
+    }
+}
+
+@each $breakpoint, $value in variables.$breakpoints {
+    @media (max-width: $value) {
+        .#{$breakpoint}\:flex-nowrap {
+            @include flex-nowrap();
+        }
+    }
+}
+
+@each $breakpoint, $value in variables.$breakpoints {
+    @media (max-width: $value) {
+        .#{$breakpoint}\:flex-1 {
+            @include flex-1();
+        }
+    }
+}
+
+@each $breakpoint, $value in variables.$breakpoints {
+    @media (max-width: $value) {
+        .#{$breakpoint}\:flex-auto {
+            @include flex-auto();
+        }
+    }
+}
+
+@each $breakpoint, $value in variables.$breakpoints {
+    @media (max-width: $value) {
+        .#{$breakpoint}\:flex-none {
+            @include flex-none();
+        }
+    }
+}
+
+@each $breakpoint, $value in variables.$breakpoints {
+    @media (max-width: $value) {
+        .#{$breakpoint}\:grow {
+            @include grow();
+        }
+    }
+}
+
+@each $breakpoint, $value in variables.$breakpoints {
+    @media (max-width: $value) {
+        .#{$breakpoint}\:shrink {
+            @include shrink();
+        }
+    }
+}
+
+@each $breakpoint, $value in variables.$breakpoints {
+    @media (max-width: $value) {
+        .#{$breakpoint}\:gap-0 {
+            @include gap-0();
+        }
+    }
+}
+
+@each $breakpoint, $value in variables.$breakpoints {
+    @media (max-width: $value) {
+        .#{$breakpoint}\:gap-1 {
+            @include gap-1();
+        }
+    }
+}
+
+@each $breakpoint, $value in variables.$breakpoints {
+    @media (max-width: $value) {
+        .#{$breakpoint}\:gap-2 {
+            @include gap-2();
+        }
+    }
+}
+
+@each $breakpoint, $value in variables.$breakpoints {
+    @media (max-width: $value) {
+        .#{$breakpoint}\:gap-3 {
+            @include gap-3();
+        }
+    }
+}
+
+@each $breakpoint, $value in variables.$breakpoints {
+    @media (max-width: $value) {
+        .#{$breakpoint}\:gap-4 {
+            @include gap-4();
+        }
+    }
+}
+
+@each $breakpoint, $value in variables.$breakpoints {
+    @media (max-width: $value) {
+        .#{$breakpoint}\:gap-5 {
+            @include gap-5();
+        }
+    }
+}
+
+@each $breakpoint, $value in variables.$breakpoints {
+    @media (max-width: $value) {
+        .#{$breakpoint}\:justify-normal {
+            @include justify-normal();
+        }
+    }
+}
+
+@each $breakpoint, $value in variables.$breakpoints {
+    @media (max-width: $value) {
+        .#{$breakpoint}\:justify-start {
+            @include justify-start();
+        }
+    }
+}
+
+@each $breakpoint, $value in variables.$breakpoints {
+    @media (max-width: $value) {
+        .#{$breakpoint}\:justify-end {
+            @include justify-end();
+        }
+    }
+}
+
+@each $breakpoint, $value in variables.$breakpoints {
+    @media (max-width: $value) {
+        .#{$breakpoint}\:justify-center {
+            @include justify-center();
+        }
+    }
+}
+
+@each $breakpoint, $value in variables.$breakpoints {
+    @media (max-width: $value) {
+        .#{$breakpoint}\:justify-between {
+            @include justify-between();
+        }
+    }
+}
+
+@each $breakpoint, $value in variables.$breakpoints {
+    @media (max-width: $value) {
+        .#{$breakpoint}\:justify-around {
+            @include justify-around();
+        }
+    }
+}
+
+@each $breakpoint, $value in variables.$breakpoints {
+    @media (max-width: $value) {
+        .#{$breakpoint}\:justify-evenly {
+            @include justify-evenly();
+        }
+    }
+}
+
+@each $breakpoint, $value in variables.$breakpoints {
+    @media (max-width: $value) {
+        .#{$breakpoint}\:justify-stretch {
+            @include justify-stretch();
+        }
+    }
+}
+
+@each $breakpoint, $value in variables.$breakpoints {
+    @media (max-width: $value) {
+        .#{$breakpoint}\:items-start {
+            @include items-start();
+        }
+    }
+}
+
+@each $breakpoint, $value in variables.$breakpoints {
+    @media (max-width: $value) {
+        .#{$breakpoint}\:items-end {
+            @include items-end();
+        }
+    }
+}
+
+@each $breakpoint, $value in variables.$breakpoints {
+    @media (max-width: $value) {
+        .#{$breakpoint}\:items-center {
+            @include items-center();
+        }
+    }
+}
+
+@each $breakpoint, $value in variables.$breakpoints {
+    @media (max-width: $value) {
+        .#{$breakpoint}\:items-baseline {
+            @include items-baseline();
+        }
+    }
+}
+
+@each $breakpoint, $value in variables.$breakpoints {
+    @media (max-width: $value) {
+        .#{$breakpoint}\:items-stretch {
+            @include items-stretch();
+        }
+    }
+}

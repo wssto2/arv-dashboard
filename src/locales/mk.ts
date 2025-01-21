@@ -1,4 +1,10 @@
+import StockEvaluationsHr from "../views/stock/evaluations/locales/hr.ts";
+
 export default {
+  stock: {
+    evaluations: StockEvaluationsHr,
+  },
+
   empty_data_message: {
     title: "No data",
     description: "No data to display",

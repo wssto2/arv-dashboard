@@ -1,0 +1,93 @@
+@use 'variables';
+
+@mixin padding($size) {
+    padding: #{$size};
+}
+
+@mixin padding-x($size) {
+    padding-left: #{$size};
+    padding-right: #{$size};
+}
+
+@mixin padding-y($size) {
+    padding-top: #{$size};
+    padding-bottom: #{$size};
+}
+
+@mixin padding-top($size) {
+    padding-top: #{$size};
+}
+
+@mixin padding-right($size) {
+    padding-right: #{$size};
+}
+
+@mixin padding-bottom($size) {
+    padding-bottom: #{$size};
+}
+
+@mixin padding-left($size) {
+    padding-left: #{$size};
+}
+
+@each $size, $sizeValue in variables.$spacing {
+    .p-#{$size} {
+        @include padding($sizeValue);
+    }
+
+    .px-#{$size} {
+        @include padding-x($sizeValue);
+    }
+
+    .py-#{$size} {
+        @include padding-y($sizeValue);
+    }
+
+    .pt-#{$size} {
+        @include padding-top($sizeValue);
+    }
+
+    .pr-#{$size} {
+        @include padding-right($sizeValue);
+    }
+
+    .pb-#{$size} {
+        @include padding-bottom($sizeValue);
+    }
+
+    .pl-#{$size} {
+        @include padding-left($sizeValue);
+    }
+
+    @each $breakpoint, $value in variables.$breakpoints {
+        @media (max-width: $value) {
+            .#{$breakpoint}\:p-#{$size} {
+                @include padding($sizeValue);
+            }
+
+            .#{$breakpoint}\:px-#{$size} {
+                @include padding-x($sizeValue);
+            }
+
+            .#{$breakpoint}\:py-#{$size} {
+                @include padding-y($sizeValue);
+            }
+
+            .#{$breakpoint}\:pt-#{$size} {
+                @include padding-top($sizeValue);
+            }
+
+            .#{$breakpoint}\:pr-#{$size} {
+                @include padding-right($sizeValue);
+            }
+
+            .#{$breakpoint}\:pb-#{$size} {
+                @include padding-bottom($sizeValue);
+            }
+
+            .#{$breakpoint}\:pl-#{$size} {
+                @include padding-left($sizeValue);
+            }
+        }
+    }
+}

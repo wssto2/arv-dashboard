@@ -1,0 +1,40 @@
+// Variables
+$colors: (
+    "primary": #2196f3,
+    "danger": #f44336,
+    "success": #4caf50,
+    "warning": #ff5722,
+    "info": #00bcd4,
+    "light": #f5f5f5,
+    "pink": #e91e63,
+    "violet": #9c27b0,
+    "purple": #673ab7,
+    "indigo": #3f51b5,
+    "blue": #03a9f4,
+    "teal": #009688,
+    "green": #8bc34a,
+    "orange": #ff9800,
+    "grey": #6b7280,
+    "slate": #607d8b,
+    "white": #fff,
+);
+
+$spacing: (
+    0: 0,
+    1: 4px,
+    2: 8px,
+    3: 12px,
+    4: 16px,
+    5: 20px,
+    6: 24px,
+    7: 28px,
+    8: 32px,
+);
+
+$breakpoints: (
+    xs: 640px,
+    sm: 768px,
+    md: 1024px,
+    lg: 1280px,
+    xl: 1536px
+);

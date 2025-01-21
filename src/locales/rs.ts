@@ -1,4 +1,10 @@
+import StockEvaluationsHr from "../views/stock/evaluations/locales/hr.ts";
+
 export default {
+  stock: {
+    evaluations: StockEvaluationsHr,
+  },
+
   empty_data_message: {
     title: "Nema podataka",
     description: "Nema podataka za prikaz",

@@ -1,0 +1,94 @@
+@use 'sass:map';
+@use 'variables';
+
+@mixin margin($size) {
+    margin: map.get(variables.$spacing, $size);
+}
+
+@mixin margin-x($size) {
+    margin-left: map.get(variables.$spacing, $size);
+    margin-right: map.get(variables.$spacing, $size);
+}
+
+@mixin margin-y($size) {
+    margin-top: map.get(variables.$spacing, $size);
+    margin-bottom: map.get(variables.$spacing, $size);
+}
+
+@mixin margin-top($size) {
+    margin-top: map.get(variables.$spacing, $size);
+}
+
+@mixin margin-right($size) {
+    margin-right: map.get(variables.$spacing, $size);
+}
+
+@mixin margin-bottom($size) {
+    margin-bottom: map.get(variables.$spacing, $size);
+}
+
+@mixin margin-left($size) {
+    margin-left: map.get(variables.$spacing, $size);
+}
+
+@each $size, $value in variables.$spacing {
+    .m-#{$size} {
+        @include margin($size);
+    }
+
+    .mx-#{$size} {
+        @include margin-x($size);
+    }
+
+    .my-#{$size} {
+        @include margin-y($size);
+    }
+
+    .mt-#{$size} {
+        @include margin-top($size);
+    }
+
+    .mr-#{$size} {
+        @include margin-right($size);
+    }
+
+    .mb-#{$size} {
+        @include margin-bottom($size);
+    }
+
+    .ml-#{$size} {
+        @include margin-left($size);
+    }
+
+    @each $breakpoint, $value in variables.$breakpoints {
+        @media (max-width: $value) {
+            .#{$breakpoint}\:m-#{$size} {
+                @include margin($size);
+            }
+
+            .#{$breakpoint}\:mx-#{$size} {
+                @include margin-x($size);
+            }
+
+            .#{$breakpoint}\:my-#{$size} {
+                @include margin-y($size);
+            }
+
+            .#{$breakpoint}\:mt-#{$size} {
+                @include margin-top($size);
+            }
+
+            .#{$breakpoint}\:mr-#{$size} {
+                @include margin-right($size);
+            }
+
+            .#{$breakpoint}\:mb-#{$size} {
+                @include margin-bottom($size);
+            }
+
+            .#{$breakpoint}\:ml-#{$size} {
+                @include margin-left($size);
+            }
+        }
+    }
+}

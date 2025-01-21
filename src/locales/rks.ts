@@ -1,4 +1,10 @@
+import StockEvaluationsHr from "../views/stock/evaluations/locales/hr.ts";
+
 export default {
+  stock: {
+    evaluations: StockEvaluationsHr,
+  },
+
   empty_data_message: {
     title: "Nuk ka të dhëna",
     description: "Nuk ka të dhëna për të shfaqur",

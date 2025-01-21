@@ -8,11 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <!-- <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="/assets/css/core.min.css" rel="stylesheet" type="text/css">
-    <link href="/assets/css/components.min.css" rel="stylesheet" type="text/css">
-    <link href="/assets/css/colors.min.css" rel="stylesheet" type="text/css">
-    <link href="/assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css"> -->
     <script type="module" crossorigin src="/assets/index.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/vendor.js">
     <link rel="stylesheet" crossorigin href="/assets/index.css">
@@ -21,18 +16,17 @@
     <div class="page-container">
       <div class="page-content">
         <div class="content-wrapper">
-          <div class="content">
-            <div id="widgetsRoot"></div>
-          </div>
+          <div id="widgetsRoot"></div>
         </div>
       </div>
     </div>
 
     <script>
       window.DASHBOARD_STATE = {
-        locale: 'ba',
-        api_base_url: 'http://127.0.0.1:6300/arv/ba/',
-        api_token: 'hHR2MR5Y0aXkOqNKk8tKdnVAhdL1mFNB',
+        locale: 'hr',
+        api_base_url: 'http://127.0.0.1:6300/arv/hr/',
+        api_token: 'a9fi83tos3FfIFX2S0ZwnbSgDvFnclBu',
+        route: 'stock.evaluations.index',
         widgets: [
           'vega_active_status_by_brand',
           'sale_summary_by_dealer',

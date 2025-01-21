@@ -1,0 +1,55 @@
+@use 'variables';
+
+@each $size, $value in variables.$spacing {
+    .w-#{$size} {
+        width: $value;
+    }
+    
+    .min-w-#{$size} {
+        min-width: $value;
+    }
+    
+    .max-w-#{$size} {
+        max-width: $value;
+    }
+
+    .h-#{$size} {
+        height: $value;
+    }
+
+    .min-h-#{$size} {
+        min-height: $value;
+    }
+
+    .max-h-#{$size} {
+        max-height: $value;
+    }
+
+    @each $breakpoint, $value in variables.$breakpoints {
+        @media (max-width: $value) {
+            .#{$breakpoint}\:w-#{$size} {
+                width: $value;
+            }
+            
+            .#{$breakpoint}\:min-w-#{$size} {
+                min-width: $value;
+            }
+            
+            .#{$breakpoint}\:max-w-#{$size} {
+                max-width: $value;
+            }
+
+            .#{$breakpoint}\:h-#{$size} {
+                height: $value;
+            }
+
+            .#{$breakpoint}\:min-h-#{$size} {
+                min-height: $value;
+            }
+
+            .#{$breakpoint}\:max-h-#{$size} {
+                max-height: $value;
+            }
+        }
+    }
+}

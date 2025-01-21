@@ -1,0 +1,18 @@
+@mixin opacity($opacity) {
+  opacity: $opacity;
+}
+
+@each $i in 10 20 30 40 50 60 70 80 90 100 {
+  .opacity-#{$i} {
+    @include opacity(calc($i / 100));
+  }
+
+  .hover\:opacity-#{$i}:hover {
+    @include opacity(calc($i / 100));
+  }
+
+  [disabled].disabled\:opacity-#{$i} {
+    @include opacity(calc($i / 100));
+  }
+}
+

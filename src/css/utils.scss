@@ -1,0 +1,38 @@
+@use 'variables';
+@use 'text';
+@use 'flex';
+@use 'grid';
+@use 'margin';
+@use 'padding';
+@use 'colors';
+@use 'shadow';
+@use 'ring';
+@use 'rounded';
+@use 'opacity';
+@use 'width';
+@use 'components';
+
+:root {
+    --tw-shadow-color: #0000001a;
+    --font-family: 'Inter', sans-serif;
+}
+
+html, body {
+    font-family: var(--font-family);
+}
+
+.select-none {
+    user-select: none;
+}
+
+.select-text {
+    user-select: text;
+}
+
+.select-all {
+    user-select: all;
+}
+
+.select-auto {
+    user-select: auto;
+}
